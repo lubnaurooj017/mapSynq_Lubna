@@ -31,7 +31,14 @@ This git repo is to automate the http://www.mapsynq.com/ website for testing pur
 3. Follow the maven commands below to run (test) this project:
 
 ## maven command to run the project through command line by passing arguments
+> chrome
+`mvn clean test -Durl="http://www.mapsynq.com/" -Dbrowser="chrome" -DxmlFileName=testng.xml`
+
+> Firefox
 `mvn clean test -Durl="http://www.mapsynq.com/" -Dbrowser="firefox" -DxmlFileName=testng.xml`
+
+> Safari
+`mvn clean test -Durl="http://www.mapsynq.com/" -Dbrowser="safari" -DxmlFileName=testng.xml`
 
 > *Some of important maven commands*:
 ```
