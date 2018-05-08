@@ -56,15 +56,13 @@ mvn package
 - Go to <LOCAL_WORKING_DIRECTORY>/lubna_work/target/surefire-reports/
 - Then click index.html present inside
 - Things you should be able to see:
-      ```
-      testng.xml
-      1 test
-      0 groups
-      Times
-      Reporter output
-      Ignored methods
-      Chronological view
-      ```
+  - testng.xml
+  - test
+  - groups
+  - Times
+  - Reporter output
+  - Ignored methods
+  - Chronological view
 
 ## Test Cases **SCREENSHOTS** captured ?
 - [x] YES
@@ -101,6 +99,18 @@ mvn package
 - pom.xml
 - testng.xml
 
-## Test Cases:
+## Test Cases Methods used:
+- ValidateErrorMessageDisplayedForInvalidLogin
+- ValidateValidLogin
+- ValidateDirectionDisplayedForFilledSourceAndDestination
+- ValidateAndClickAlertForUnfilledSourceAndDestination
+- ValidateAndClickOnAlertForAllCheckboxesUnchecked
+- ValidateDirectionDisplayedForAllCheckboxesChecked
+- ValidateDirectionDisplayedForSelectedCheckBox
+- ValidateDirectionDisplayedForTollAwareCheckBox
+- ValidateDirectionDisplayedForTrafficAwareCheckBox
+- ValidateDirectionDisplayedForFastestCheckBox
+- ValidateDirectionDisplayedForShortestCheckBox
+
 
 
