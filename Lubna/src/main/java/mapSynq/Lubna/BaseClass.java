@@ -9,13 +9,13 @@ import org.openqa.selenium.safari.SafariDriver;
 
 public class BaseClass {
 
-	public WebDriver dr = null;
+	public static WebDriver dr = null;
 
 	public WebDriver getDriver()
 	{
 		//String browserName = System.getProperty("browser");	
 		//browserName = browserName.toUpperCase();
-		String browserName = "safari";
+		String browserName = "FIREFOX";
 		browserName = browserName.toUpperCase();
 		switch(browserName) 
 		{

@@ -1,36 +1,44 @@
 package mapSynq.Lubna.Business;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import mapSynq.Lubna.BaseClass;
 import mapSynq.Lubna.Directions.directionClass;
 
-public class BusinessDirectionClass extends directionClass{
+public class BusinessDirectionClass{
 
-	utilityClass uc= new utilityClass(dr);
-	public BusinessDirectionClass(WebDriver dr) {
-		super(dr);
-	}
+	
+	BaseClass bs = new BaseClass();
+	WebDriver dr = bs.getDriver();
+	directionClass dc = new directionClass();
+	utilityClass uc = new utilityClass();
 
 	public boolean getDirections(String strSourceLoc, String strDestinationLoc) 
 	{
 		//Clicking on the Directions Tab
-		getDirectionTab().click();
+		dc.getDirectionTab().click();
 
 		//Clicking on clear Route Button
-		getClearBtn().click();
+		dc.getClearBtn().click();
 
 		//Set Source Location
-		getSourceLocation().sendKeys(strSourceLoc);
+		dc.getSourceLocation().sendKeys(strSourceLoc);
 		boolean sourceSelected = uc.selectValuesFromBootstrapDropdowns(strSourceLoc);
 		if(sourceSelected)
 		{
 			//Set Destination Location
-			getDestinationLocation().sendKeys(strDestinationLoc);
+			dc.getDestinationLocation().sendKeys(strDestinationLoc);
 			boolean destinationSelected = uc.selectValuesFromBootstrapDropdowns(strDestinationLoc);
 			if(destinationSelected)
 			{
 				//Click on Get Directions Button
-				getGetDirectionsBtn().click();
+				dc.getGetDirectionsBtn().click();
+				WebDriverWait wait = new WebDriverWait(dr,20);
+				wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(dc.getSelectTimeDropDown())));		
+
 				return true;
 			}
 			else
@@ -45,4 +53,12 @@ public class BusinessDirectionClass extends directionClass{
 			return false;
 		}
 	}
+	
+	public void getDirectionsForUnfilledLocations()
+	{
+		dc.getDirectionTab().click();
+		dc.getClearBtn().click();
+		dc.getGetDirectionsBtn().click();
+	}
+	
 }

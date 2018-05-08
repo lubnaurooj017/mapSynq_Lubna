@@ -8,12 +8,11 @@ import org.openqa.selenium.WebElement;
 
 import mapSynq.Lubna.BaseClass;
 
-public class directionClass extends BaseClass {
-	public WebDriver dr;
-	public directionClass(WebDriver dr)
-	{
-		this.dr = dr;
-	}
+public class directionClass {
+	
+	
+	BaseClass bs = new BaseClass();
+	WebDriver dr = bs.getDriver();
 
 	public By trafficAware  = By.id("also_traffic");
 	public By fastest       = By.id("also_fastest");
@@ -25,7 +24,8 @@ public class directionClass extends BaseClass {
 	public By getDirectionBtn = By.id("get_direction");
 	public By directionsTab   = By.xpath("//a[@data-tabid='0']");
 	public By locationDropDown = By.xpath("//div[starts-with(@id, 'Autocomplete_') and @class = 'autocomplete']/div");
-
+	public String selectTimeDropwDown ="slJourneyTimeTraffic";
+	
 	public WebElement getDirectionTab()
 	{
 		return dr.findElement(directionsTab);
@@ -77,4 +77,8 @@ public class directionClass extends BaseClass {
 		return dr.findElements(locationDropDown);
 	}
 	
+	public String getSelectTimeDropDown()
+	{
+		return selectTimeDropwDown;
+	}
 }

@@ -5,8 +5,7 @@
     <classes>
       <class name="mapSynq.Lubna.TestCases.mapSynqTest">
         <methods>
-          <include name="beforeSuite"/>
-          <include name="validateAndClickAlertForUnfilledSourceAndDestination"/>
+          <include name="ValidateDirectionDisplayedForFilledSourceAndDestination"/>
         </methods>
       </class> <!-- mapSynq.Lubna.TestCases.mapSynqTest -->
     </classes>
