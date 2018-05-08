@@ -1,16 +1,16 @@
-# mapSynq_Lubna
+## mapSynq_Lubna
 This git repo is to automate the http://www.mapsynq.com/ website for testing purpose.
 
-# Tools used
+## Tools used
 - selenium
 - eclipse
 - TestNG
 - maven
 
-# Language code is written
+## Language code is written
 - java
 
-# Frameworks followed
+## Frameworks followed
 - POM
 - DOM
 
