@@ -5,8 +5,11 @@
     <classes>
       <class name="mapSynqTest.mapSynqTestClass">
         <methods>
+          <include name="beforeTest"/>
+          <include name="afterSuite"/>
           <include name="beforeSuite"/>
-          <include name="ValidateDirectionDisplayedForFilledSourceAndDestination"/>
+          <include name="afterTest"/>
+          <include name="ValidateAndClickOnAlertForAllCheckboxesUnchecked"/>
         </methods>
       </class> <!-- mapSynqTest.mapSynqTestClass -->
     </classes>

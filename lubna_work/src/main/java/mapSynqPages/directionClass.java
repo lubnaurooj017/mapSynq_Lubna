@@ -22,7 +22,7 @@ public class directionClass extends businessClass{
 	public By directionsTab   = By.xpath("//a[@data-tabid='0']");
 	public By locationDropDown = By.xpath("//div[starts-with(@id, 'Autocomplete_') and @class = 'autocomplete']/div");
 	public String selectTimeDropwDown ="slJourneyTimeTraffic";
-	
+
 	public WebElement getDirectionTab()
 	{
 		return dr.findElement(directionsTab);
@@ -73,7 +73,7 @@ public class directionClass extends businessClass{
 	{
 		return dr.findElements(locationDropDown);
 	}
-	
+
 	public String getSelectTimeDropDown()
 	{
 		return selectTimeDropwDown;
@@ -116,10 +116,10 @@ public class directionClass extends businessClass{
 			return false;
 		}
 	}
-	
+
 	public boolean selectValuesFromBootstrapDropdowns(String location) 
 	{
-		WebDriverWait wait = new WebDriverWait(dr,20);
+		WebDriverWait wait = new WebDriverWait(dr,60);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[starts-with(@id,'Autocomplete_')]//div[2][starts-with(@title,'" + location + "')]")));		
 		List<WebElement> wl= getLocationBootstrapDropdown();
 
@@ -136,12 +136,143 @@ public class directionClass extends businessClass{
 		}
 		return false;
 	}
-	
+
 	public void getDirectionsForUnfilledLocations()
 	{
 		getDirectionTab().click();
 		getClearBtn().click();
 		getGetDirectionsBtn().click();
 	}
+
+	public void setLocationsAndClickDirectionBtn(String strSourceLoc, String strDestinationLoc)
+	{
+		setLocation(strSourceLoc, strDestinationLoc);
+		getGetDirectionsBtn().click();
+	}
+
+	public void setLocation(String strSourceLoc, String strDestinationLoc)
+	{
+		getDirectionTab().click();
+		getClearBtn().click();
+		getSourceLocation().sendKeys(strSourceLoc);
+		selectValuesFromBootstrapDropdowns(strSourceLoc);
+		getDestinationLocation().sendKeys(strDestinationLoc);
+		selectValuesFromBootstrapDropdowns(strDestinationLoc);
+	}
+
+	public boolean ValidateTravelTimeDistanceDisplayedAsPerCheckBoxChecked(String checkBoxName)
+	{	
+		checkBoxName = checkBoxName.toUpperCase();
+		boolean trafficAwareisDiaplayed = dr.findElement(By.id("divTrafficRouteTravelTimeDistance")).isDisplayed();
+		boolean fastestisDisplayed = dr.findElement(By.id("divFastestRouteTravelTimeDistance")).isDisplayed();
+		boolean tollAwareisDisplayed = dr.findElement(By.id("divErpRouteTravelTimeDistance")).isDisplayed();
+		boolean shortestisDisplayed = dr.findElement(By.id("divShortestRouteTravelTimeDistance")).isDisplayed();
+		
+		switch(checkBoxName) 
+		{
+		case "TRAFFICAWARE" :
+			if(trafficAwareisDiaplayed)
+			{
+				System.out.println("The Travel Time Distance is displayed for Traffic Aware Route");
+				return true;
+			}
+			break;
+		case "FASTEST" :
+			if(fastestisDisplayed)
+			{
+				System.out.println("The Fastest Route Travel Time Distance is displayed");
+				return true;
+			}
+			break;
+		case "TOLLAWARE" :
+			if(tollAwareisDisplayed)
+			{
+				System.out.println("The Travel Time Distance is displayed for Toll Aware");
+				return true;
+			}
+			break;
+		case "SHORTEST" :
+			if(shortestisDisplayed)
+			{
+				System.out.println("The Shortest Route Travel Time Distance is displayed");
+				return true;
+			}
+			break;
+		case "ALL" :
+			if(trafficAwareisDiaplayed && fastestisDisplayed && tollAwareisDisplayed && shortestisDisplayed)
+			{
+				System.out.println("All the Routes Travel Time Distance is displayed");
+				return true;
+			}
+		
+		}
+		return false;
+	}
 	
+	public WebElement returnCheckBox(String checkBoxName)
+	{
+		checkBoxName = checkBoxName.toUpperCase();
+		switch(checkBoxName) 
+		{
+		case "TRAFFICAWARE" :
+			return dr.findElement(trafficAware);		
+		case "FASTEST" :
+			return dr.findElement(fastest);
+		case "TOLLAWARE" :
+			return dr.findElement(tollAware);
+		case "SHORTEST" :
+			return dr.findElement(shortest);
+		}
+		return null;
+	}
+
+	public boolean selectCheckBox(String checkBoxName)
+	{	
+		WebElement checkBoxObj = returnCheckBox(checkBoxName);
+		if(!checkBoxObj.isSelected())
+		{
+			checkBoxObj.click();
+			if(checkBoxObj.isSelected())
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
+		return true;
+	}
+
+	public void uncheckAllCheckBoxes()
+	{
+		getDirectionTab().click();
+		List<WebElement> checkBoxes = dr.findElements(By.xpath("//input[starts-with(@onclick,'toggle_route_checkbox')]"));
+
+		for (int i = 0; i < checkBoxes.size(); i++) 
+		{ 
+			if(checkBoxes.get(i).isSelected())
+			{
+				checkBoxes.get(i).click(); 
+			}
+		} 
+
+	}
+	
+	public void checkAllCheckBoxes()
+	{
+		getDirectionTab().click();
+		List<WebElement> checkBoxes = dr.findElements(By.xpath("//input[starts-with(@onclick,'toggle_route_checkbox')]"));
+
+		for (int i = 0; i < checkBoxes.size(); i++) 
+		{ 
+			if(!checkBoxes.get(i).isSelected())
+			{
+				checkBoxes.get(i).click(); 
+			}
+		} 
+
+	}
+
+
 }

@@ -90,7 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,6 +102,16 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="mapSynqTest.mapSynqTestClass" class="method navigator-link" hash-for-method="ValidateAndClickAlertForUnfilledSourceAndDestination">ValidateAndClickAlertForUnfilledSourceAndDestination</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="mapSynqTest.mapSynqTestClass" class="method navigator-link" hash-for-method="ValidateAndClickOnAlertForAllCheckboxesUnchecked">ValidateAndClickOnAlertForAllCheckboxesUnchecked</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="mapSynqTest.mapSynqTestClass" class="method navigator-link" hash-for-method="ValidateDirectionDisplayedForAllCheckboxesChecked">ValidateDirectionDisplayedForAllCheckboxesChecked</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -132,6 +142,24 @@
                   <a name="ValidateAndClickAlertForUnfilledSourceAndDestination">
                   </a> <!-- ValidateAndClickAlertForUnfilledSourceAndDestination -->
                   <span class="method-name">ValidateAndClickAlertForUnfilledSourceAndDestination</span>
+                  <em>
+(Open a browser with http://www.mapsynq.com/ url)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ValidateAndClickOnAlertForAllCheckboxesUnchecked">
+                  </a> <!-- ValidateAndClickOnAlertForAllCheckboxesUnchecked -->
+                  <span class="method-name">ValidateAndClickOnAlertForAllCheckboxesUnchecked</span>
+                  <em>
+(Open a browser with http://www.mapsynq.com/ url)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ValidateDirectionDisplayedForAllCheckboxesChecked">
+                  </a> <!-- ValidateDirectionDisplayedForAllCheckboxesChecked -->
+                  <span class="method-name">ValidateDirectionDisplayedForAllCheckboxesChecked</span>
                   <em>
 (Open a browser with http://www.mapsynq.com/ url)                  </em>
                 </div> <!-- method-content -->
@@ -202,20 +230,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'ValidateDirectionDisplayedForFilledSourceAndDestination')
 data.setCell(0, 2, 'mapSynqTest.mapSynqTestClass')
-data.setCell(0, 3, 3350);
+data.setCell(0, 3, 3332);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'ValidateAndClickAlertForUnfilledSourceAndDestination')
+data.setCell(1, 1, 'ValidateDirectionDisplayedForAllCheckboxesChecked')
 data.setCell(1, 2, 'mapSynqTest.mapSynqTestClass')
-data.setCell(1, 3, 531);
+data.setCell(1, 3, 3164);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'ValidateAndClickAlertForUnfilledSourceAndDestination')
+data.setCell(2, 2, 'mapSynqTest.mapSynqTestClass')
+data.setCell(2, 3, 652);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'ValidateAndClickOnAlertForAllCheckboxesUnchecked')
+data.setCell(3, 2, 'mapSynqTest.mapSynqTestClass')
+data.setCell(3, 3, 53);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 seconds</span>
+              <span class="suite-total-time">Total running time: 7 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -248,23 +284,63 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-test before">
                 <span class="method-name">beforeTest</span>
-                <span class="method-start">364 ms</span>
+                <span class="method-start">336 ms</span>
               </div> <!-- configuration-test before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethos</span>
+                <span class="method-start">1552 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">ValidateDirectionDisplayedForFilledSourceAndDestination</span>
-                <span class="method-start">1175 ms</span>
+                <span class="method-start">2325 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">6438 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethos</span>
+                <span class="method-start">6438 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">ValidateAndClickAlertForUnfilledSourceAndDestination</span>
-                <span class="method-start">4947 ms</span>
+                <span class="method-start">7712 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">8730 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethos</span>
+                <span class="method-start">8730 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">ValidateAndClickOnAlertForAllCheckboxesUnchecked</span>
+                <span class="method-start">9549 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">10092 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethos</span>
+                <span class="method-start">10093 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">ValidateDirectionDisplayedForAllCheckboxesChecked</span>
+                <span class="method-start">10920 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">14412 ms</span>
+              </div> <!-- configuration-method after -->
               <div class="configuration-test after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">5780 ms</span>
+                <span class="method-start">14413 ms</span>
               </div> <!-- configuration-test after -->
               <div class="configuration-suite after">
                 <span class="method-name">afterSuite</span>
-                <span class="method-start">5797 ms</span>
+                <span class="method-start">14429 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

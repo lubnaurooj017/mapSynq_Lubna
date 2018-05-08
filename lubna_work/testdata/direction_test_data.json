@@ -37,7 +37,7 @@
 		"Shortest": true
 	},
 	"testMapDirectionWithAllOptionsDisabled":{
-		"Source": "SENGKANG",
+		"Source": "BUKIT PANJANG",
 		"Destination": "PUNGGOL",
 		"TrafficAware": false,
 		"TollAware": false,
@@ -45,8 +45,8 @@
 		"Shortest": false
 	},
 	"testMapDirectionWithAllOptionsEnabled":{
-		"Source": "SENGKANG",
-		"Destination": "PUNGGOL",
+		"Source": "BUONA VISTA",
+		"Destination": "Farrer Park Road",
 		"TrafficAware": true,
 		"TollAware": true,
 		"Fastest": true,
