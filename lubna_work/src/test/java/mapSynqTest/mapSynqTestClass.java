@@ -21,8 +21,8 @@ public class mapSynqTestClass extends businessClass{
 	public void beforeSuite()
 	{	
 		dr.manage().window().maximize();
-		//String browserUrl = System.getProperty("url");
-		 browserUrl = "http://www.mapsynq.com/";
+		browserUrl = System.getProperty("url");
+		// browserUrl = "http://www.mapsynq.com/";
 	}
 
 	@BeforeTest
