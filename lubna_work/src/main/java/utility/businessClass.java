@@ -1,20 +1,22 @@
 package utility;
 
 import java.io.File;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
+
 public class businessClass {
 
 	public static WebDriver dr = null;
 	public WebDriver getDriver()
 	{
-		String browserName = System.getProperty("browser");	
-		browserName = browserName.toUpperCase();
-		//String browserName = "FIREFOX";
+		//String browserName = System.getProperty("browser");	
+		//browserName = browserName.toUpperCase();
+		String browserName = "FIREFOX";
 		browserName = browserName.toUpperCase();
 		switch(browserName) 
 		{

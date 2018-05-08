@@ -1,27 +1,31 @@
 package mapSynqTest;
 
 import org.testng.annotations.Test;
+import org.json.JSONObject;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
-
 import mapSynqPages.directionClass;
 import utility.businessClass;
+import utility.parseJsonClass;
 
 
 public class mapSynqTestClass extends businessClass{
 	
+	parseJsonClass pjc= new parseJsonClass();
 	String browserUrl="";
 	directionClass dc = new directionClass();
 	WebDriver dr = getDriver();
+	JSONObject jsonObj= null;
+	
 	@BeforeSuite
 	public void beforeSuite()
 	{	
 		dr.manage().window().maximize();
-		browserUrl = System.getProperty("url");
+		//browserUrl = System.getProperty("url");
+		jsonObj= pjc.getJsonTestDataObject();
 		// browserUrl = "http://www.mapsynq.com/";
 	}
 
@@ -29,17 +33,19 @@ public class mapSynqTestClass extends businessClass{
 	public void beforeTest()
 	{
 		System.out.println("Before test");
-		String url = browserUrl; //"http://www.mapsynq.com/";
+		String url = "http://www.mapsynq.com/";
 		dr.get(url);
 	}
 
 	@Test(priority = 0, description = "Open a browser with http://www.mapsynq.com/ url, clear route, fill source and destination,click on getdirection button")
-	public void ValidateDirectionDisplayedForFilledSourceAndDestination() 
+	public void ValidateDirectionDisplayedForFilledSourceAndDestination()
 	{   
 		try
 		{
-			String SourceLoc="BEDOK";
-			String DestLoc= "PUNGGOL";
+			String SourceLoc=pjc.parseJsonTestData(jsonObj, "ValidateDirectionDisplayedForFilledSourceAndDestination", "Source");
+					//"SENGKANG"; 
+			String DestLoc= pjc.parseJsonTestData(jsonObj, "ValidateDirectionDisplayedForFilledSourceAndDestination", "Destination");
+			//"PUNGGOL";
 			if(dc.getDirections(SourceLoc, DestLoc))
 			{
 				System.out.println("The direction between" + SourceLoc + " and " + DestLoc +" Is Displayed");

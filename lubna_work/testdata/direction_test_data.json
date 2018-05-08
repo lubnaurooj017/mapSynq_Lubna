@@ -1,0 +1,55 @@
+{
+	"ValidateDirectionDisplayedForFilledSourceAndDestination": {
+		"Source": "SENGKANG",
+		"Destination": "RAFFLES PLACE"
+	},
+	"testMapDirectionWithTrafficAwareOptionEnabledOnly": {
+		"Source": "SENGKANG",
+		"Destination": "PUNGGOL",
+		"TrafficAware": true,
+		"TollAware": false,
+		"Fastest": false,
+		"Shortest": false
+	},
+	"testMapDirectionWithTollAwareOptionEnabledOnly":{
+		"Source": "SENGKANG",
+		"Destination": "PUNGGOL",
+		"TrafficAware": false,
+		"TollAware": true,
+		"Fastest": false,
+		"Shortest": false
+	},
+	"testMapDirectionWithFastestOptionEnabledOnly":{
+		"Source": "SENGKANG",
+		"Destination": "PUNGGOL",
+		"TrafficAware": false,
+		"TollAware": false,
+		"Fastest": true,
+		"Shortest": false
+	},
+	"testMapDirectionWithShortestOptionEnabledOnly":{
+		"testmethod":"",
+		"Source": "SENGKANG",
+		"Destination": "PUNGGOL",
+		"TrafficAware": false,
+		"TollAware": false,
+		"Fastest": false,
+		"Shortest": true
+	},
+	"testMapDirectionWithAllOptionsDisabled":{
+		"Source": "SENGKANG",
+		"Destination": "PUNGGOL",
+		"TrafficAware": false,
+		"TollAware": false,
+		"Fastest": false,
+		"Shortest": false
+	},
+	"testMapDirectionWithAllOptionsEnabled":{
+		"Source": "SENGKANG",
+		"Destination": "PUNGGOL",
+		"TrafficAware": true,
+		"TollAware": true,
+		"Fastest": true,
+		"Shortest": true
+	}
+}
