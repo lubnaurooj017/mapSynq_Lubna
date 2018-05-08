@@ -1,5 +1,6 @@
 package mapSynqTest;
 
+import org.testng.annotations.Test;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
@@ -69,7 +70,7 @@ public class mapSynqTestClass extends businessClass{
 			if(alertText.equalsIgnoreCase("Please enter route Start and Destination."))
 			{
 				System.out.println("Valid Alert Message is displayed when either Source or Destination or Both are left unfilled");
-				//clickOnAlert();
+				clickOnAlert();
 			}
 			else
 			{

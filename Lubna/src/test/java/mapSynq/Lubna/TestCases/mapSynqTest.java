@@ -14,11 +14,11 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Listeners;
 
 import mapSynq.Lubna.BaseClass;
 import mapSynq.Lubna.Business.BusinessDirectionClass;
 import mapSynq.Lubna.Business.utilityClass;
-
 
 public class mapSynqTest {
 	
@@ -29,7 +29,6 @@ public class mapSynqTest {
 	String browserUrl="";
 	BusinessDirectionClass businessClass = PageFactory.initElements(dr, BusinessDirectionClass.class);
 	static String filePath = System.getProperty("user.dir") + "/Screenshots/";
-	
 
 	public void captureScreenshot(String screenshotName)
 	{
@@ -89,7 +88,7 @@ public class mapSynqTest {
 
 	}
 	
-	@Test(priority = 1, enabled=false, description = "Open a browser with http://www.mapsynq.com/ url")		
+	@Test(priority = 1, description = "Open a browser with http://www.mapsynq.com/ url")		
 	public void ValidateAndClickAlertForUnfilledSourceAndDestination()
 	{
 

@@ -21,21 +21,6 @@ public class listenersClass extends businessClass implements ITestListener{
 		return new SimpleDateFormat("yyyy-MM-dd HH-mm-ss").format(new Date());
 	}
 	
-	static String filePath = System.getProperty("user.dir") + "/Screenshots/";
-	public void captureScreenshot(String screenshotName)
-	{
-		File scrFile = ((TakesScreenshot) dr).getScreenshotAs(OutputType.FILE);
-		try
-		{
-			FileUtils.copyFile(scrFile, new File(filePath + screenshotName + ".png"));
-			System.out.println("***Placed screen shot in " + filePath + " ***");
-		}
-		catch (IOException e)
-		{
-			e.printStackTrace();
-		}
-	}
-	
 	@Override
 	public void onTestStart(ITestResult result) {
 		
@@ -44,14 +29,14 @@ public class listenersClass extends businessClass implements ITestListener{
 	@Override
 	public void onTestSuccess(ITestResult result) {
 		System.out.println("Test Case : " + result.getName() + " Passed and details are captured in the Screenshot and Logs");
-		captureScreenshot(result.getName() + "_" + timestamp());
+		captureScreenshotClass.captureScreenshot(result.getName() + "_" + timestamp());
 		
 	}
 
 	@Override
 	public void onTestFailure(ITestResult result) {
 		System.out.println("Test Case : " + result.getName() + " Failed and details are captured in the Screenshot and Logs");
-		captureScreenshot(result.getName() + "_" + timestamp());
+		captureScreenshotClass.captureScreenshot(result.getName() + "_" + timestamp());
 		
 	}
 
