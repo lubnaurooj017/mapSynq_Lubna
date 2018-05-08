@@ -181,7 +181,143 @@ public class mapSynqTestClass extends businessClass{
 			e.printStackTrace();
 		}
 	}
-
+	
+	@Test(priority = 5, enabled=true, description = "Open a browser with http://www.mapsynq.com/ url")
+	public void  ValidateDirectionDisplayedForTollAwareCheckBox()
+	{
+		try
+		{
+			String SourceLoc=pjc.parseJsonTestData(jsonObj, "testMapDirectionWithTollAwareOptionEnabledOnly", "Source");
+			String DestLoc= pjc.parseJsonTestData(jsonObj, "testMapDirectionWithTollAwareOptionEnabledOnly", "Destination");
+			dc.setLocation(SourceLoc, DestLoc);
+			dc.uncheckAllCheckBoxes();
+			if(dc.selectCheckBox("TOLLAWARE"))
+			{
+				dc.getGetDirectionsBtn().click();
+				if(dc.ValidateTravelTimeDistanceDisplayedAsPerCheckBoxChecked("TOLLAWARE"))
+				{
+					System.out.println("The Travel Time Distance is displayed as for Toll Aware checkbox");
+				}
+				else
+				{
+					System.out.println("The Travel Time Distance is NOT displayed as for Toll Aware checkbox");
+					System.exit(1);
+				}
+			}
+			else
+			{
+				System.out.println("Unable to check the CheckBox");
+				System.exit(1);
+			}
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+	
+	@Test(priority = 6, enabled=true, description = "Open a browser with http://www.mapsynq.com/ url")
+	public void  ValidateDirectionDisplayedForTrafficAwareCheckBox()
+	{
+		try
+		{
+			String SourceLoc=pjc.parseJsonTestData(jsonObj, "testMapDirectionWithTrafficAwareOptionEnabledOnly", "Source");
+			String DestLoc= pjc.parseJsonTestData(jsonObj, "testMapDirectionWithTrafficAwareOptionEnabledOnly", "Destination");
+			dc.setLocation(SourceLoc, DestLoc);
+			dc.uncheckAllCheckBoxes();
+			if(dc.selectCheckBox("TRAFFICAWARE"))
+			{
+				dc.getGetDirectionsBtn().click();
+				if(dc.ValidateTravelTimeDistanceDisplayedAsPerCheckBoxChecked("TRAFFICAWARE"))
+				{
+					System.out.println("The Travel Time Distance is displayed as for TRAFFICAWARE checkbox");
+				}
+				else
+				{
+					System.out.println("The Travel Time Distance is NOT displayed as for TRAFFICAWARE checkbox");
+					System.exit(1);
+				}
+			}
+			else
+			{
+				System.out.println("Unable to check the CheckBox");
+				System.exit(1);
+			}
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+	
+	@Test(priority = 5, enabled=true, description = "Open a browser with http://www.mapsynq.com/ url")
+	public void  ValidateDirectionDisplayedForFastestCheckBox()
+	{
+		try
+		{
+			String SourceLoc=pjc.parseJsonTestData(jsonObj, "testMapDirectionWithFastestOptionEnabledOnly", "Source");
+			String DestLoc= pjc.parseJsonTestData(jsonObj, "testMapDirectionWithFastestOptionEnabledOnly", "Destination");
+			dc.setLocation(SourceLoc, DestLoc);
+			dc.uncheckAllCheckBoxes();
+			if(dc.selectCheckBox("Fastest"))
+			{
+				dc.getGetDirectionsBtn().click();
+				if(dc.ValidateTravelTimeDistanceDisplayedAsPerCheckBoxChecked("Fastest"))
+				{
+					System.out.println("The Travel Time Distance is displayed as for Fastest checkbox");
+				}
+				else
+				{
+					System.out.println("The Travel Time Distance is NOT displayed as for Fastest checkbox");
+					System.exit(1);
+				}
+			}
+			else
+			{
+				System.out.println("Unable to check the CheckBox");
+				System.exit(1);
+			}
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+	
+	@Test(priority = 5, enabled=true, description = "Open a browser with http://www.mapsynq.com/ url")
+	public void  ValidateDirectionDisplayedForShortestCheckBox()
+	{
+		try
+		{
+			String SourceLoc=pjc.parseJsonTestData(jsonObj, "testMapDirectionWithShortestOptionEnabledOnly", "Source");
+			String DestLoc= pjc.parseJsonTestData(jsonObj, "testMapDirectionWithShortestOptionEnabledOnly", "Destination");
+			dc.setLocation(SourceLoc, DestLoc);
+			dc.uncheckAllCheckBoxes();
+			if(dc.selectCheckBox("Shortest"))
+			{
+				dc.getGetDirectionsBtn().click();
+				if(dc.ValidateTravelTimeDistanceDisplayedAsPerCheckBoxChecked("Shortest"))
+				{
+					System.out.println("The Travel Time Distance is displayed as for Shortest checkbox");
+				}
+				else
+				{
+					System.out.println("The Travel Time Distance is NOT displayed as for Shortest checkbox");
+					System.exit(1);
+				}
+			}
+			else
+			{
+				System.out.println("Unable to check the CheckBox");
+				System.exit(1);
+			}
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+	
 	@AfterMethod
 	public void afterMethod()
 	{
