@@ -1,73 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results total="4" passed="4" failed="0" skipped="0">
+<testng-results total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2018-05-08T12:10:47Z" name="Suite" finished-at="2018-05-08T12:11:01Z" duration-ms="14079">
+  <suite started-at="2018-05-08T13:01:59Z" name="Suite" finished-at="2018-05-08T13:02:22Z" duration-ms="23022">
     <groups>
     </groups>
-    <test started-at="2018-05-08T12:10:47Z" name="mapSynqTestClass" finished-at="2018-05-08T12:11:01Z" duration-ms="14079">
+    <test started-at="2018-05-08T13:01:59Z" name="mapSynqTestClass" finished-at="2018-05-08T13:02:22Z" duration-ms="23022">
       <class name="mapSynqTest.mapSynqTestClass">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:mapSynqTest.mapSynqTestClass@efde75f]" started-at="2018-05-08T20:10:46Z" name="beforeSuite" finished-at="2018-05-08T20:10:47Z" duration-ms="334" status="PASS">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:mapSynqTest.mapSynqTestClass@41925502]" started-at="2018-05-08T21:01:59Z" name="beforeSuite" finished-at="2018-05-08T21:01:59Z" duration-ms="338" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:mapSynqTest.mapSynqTestClass@efde75f]" started-at="2018-05-08T20:10:47Z" name="beforeTest" finished-at="2018-05-08T20:10:48Z" duration-ms="1209" status="PASS">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:mapSynqTest.mapSynqTestClass@41925502]" started-at="2018-05-08T21:01:59Z" name="beforeTest" finished-at="2018-05-08T21:02:00Z" duration-ms="871" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method is-config="true" signature="beforeMethos()[pri:0, instance:mapSynqTest.mapSynqTestClass@efde75f]" started-at="2018-05-08T20:10:48Z" name="beforeMethos" finished-at="2018-05-08T20:10:49Z" duration-ms="773" status="PASS">
+        <test-method is-config="true" signature="beforeMethos()[pri:0, instance:mapSynqTest.mapSynqTestClass@41925502]" started-at="2018-05-08T21:02:00Z" name="beforeMethos" finished-at="2018-05-08T21:02:01Z" duration-ms="734" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethos -->
-        <test-method signature="ValidateDirectionDisplayedForFilledSourceAndDestination()[pri:0, instance:mapSynqTest.mapSynqTestClass@efde75f]" started-at="2018-05-08T20:10:49Z" name="ValidateDirectionDisplayedForFilledSourceAndDestination" description="Open a browser with http://www.mapsynq.com/ url, clear route, fill source and destination,click on getdirection button" finished-at="2018-05-08T20:10:52Z" duration-ms="3332" status="PASS">
+        <test-method signature="ValidateDirectionDisplayedForFilledSourceAndDestination()[pri:0, instance:mapSynqTest.mapSynqTestClass@41925502]" started-at="2018-05-08T21:02:01Z" name="ValidateDirectionDisplayedForFilledSourceAndDestination" description="Open a browser with http://www.mapsynq.com/ url, clear route, fill source and destination,click on getdirection button" finished-at="2018-05-08T21:02:03Z" duration-ms="2783" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ValidateDirectionDisplayedForFilledSourceAndDestination -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:mapSynqTest.mapSynqTestClass@efde75f]" started-at="2018-05-08T20:10:53Z" name="afterMethod" finished-at="2018-05-08T20:10:53Z" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethos()[pri:0, instance:mapSynqTest.mapSynqTestClass@efde75f]" started-at="2018-05-08T20:10:53Z" name="beforeMethos" finished-at="2018-05-08T20:10:54Z" duration-ms="1274" status="PASS">
+        <test-method is-config="true" signature="beforeMethos()[pri:0, instance:mapSynqTest.mapSynqTestClass@41925502]" started-at="2018-05-08T21:02:04Z" name="beforeMethos" finished-at="2018-05-08T21:02:04Z" duration-ms="701" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethos -->
-        <test-method signature="ValidateAndClickAlertForUnfilledSourceAndDestination()[pri:0, instance:mapSynqTest.mapSynqTestClass@efde75f]" started-at="2018-05-08T20:10:54Z" name="ValidateAndClickAlertForUnfilledSourceAndDestination" description="Open a browser with http://www.mapsynq.com/ url" finished-at="2018-05-08T20:10:55Z" duration-ms="652" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:mapSynqTest.mapSynqTestClass@41925502]" started-at="2018-05-08T21:02:04Z" name="afterMethod" finished-at="2018-05-08T21:02:04Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="ValidateAndClickAlertForUnfilledSourceAndDestination()[pri:0, instance:mapSynqTest.mapSynqTestClass@41925502]" started-at="2018-05-08T21:02:04Z" name="ValidateAndClickAlertForUnfilledSourceAndDestination" description="Open a browser with http://www.mapsynq.com/ url" finished-at="2018-05-08T21:02:05Z" duration-ms="565" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ValidateAndClickAlertForUnfilledSourceAndDestination -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:mapSynqTest.mapSynqTestClass@efde75f]" started-at="2018-05-08T20:10:55Z" name="afterMethod" finished-at="2018-05-08T20:10:55Z" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:mapSynqTest.mapSynqTestClass@41925502]" started-at="2018-05-08T21:02:05Z" name="afterMethod" finished-at="2018-05-08T21:02:05Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethos()[pri:0, instance:mapSynqTest.mapSynqTestClass@efde75f]" started-at="2018-05-08T20:10:55Z" name="beforeMethos" finished-at="2018-05-08T20:10:56Z" duration-ms="818" status="PASS">
+        <test-method is-config="true" signature="beforeMethos()[pri:0, instance:mapSynqTest.mapSynqTestClass@41925502]" started-at="2018-05-08T21:02:05Z" name="beforeMethos" finished-at="2018-05-08T21:02:06Z" duration-ms="860" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethos -->
-        <test-method signature="ValidateAndClickOnAlertForAllCheckboxesUnchecked()[pri:0, instance:mapSynqTest.mapSynqTestClass@efde75f]" started-at="2018-05-08T20:10:56Z" name="ValidateAndClickOnAlertForAllCheckboxesUnchecked" description="Open a browser with http://www.mapsynq.com/ url" finished-at="2018-05-08T20:10:56Z" duration-ms="53" status="PASS">
+        <test-method signature="ValidateAndClickOnAlertForAllCheckboxesUnchecked()[pri:0, instance:mapSynqTest.mapSynqTestClass@41925502]" started-at="2018-05-08T21:02:06Z" name="ValidateAndClickOnAlertForAllCheckboxesUnchecked" description="Open a browser with http://www.mapsynq.com/ url" finished-at="2018-05-08T21:02:09Z" duration-ms="2692" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ValidateAndClickOnAlertForAllCheckboxesUnchecked -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:mapSynqTest.mapSynqTestClass@efde75f]" started-at="2018-05-08T20:10:56Z" name="afterMethod" finished-at="2018-05-08T20:10:56Z" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:mapSynqTest.mapSynqTestClass@41925502]" started-at="2018-05-08T21:02:09Z" name="afterMethod" finished-at="2018-05-08T21:02:09Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethos()[pri:0, instance:mapSynqTest.mapSynqTestClass@efde75f]" started-at="2018-05-08T20:10:56Z" name="beforeMethos" finished-at="2018-05-08T20:10:57Z" duration-ms="827" status="PASS">
+        <test-method is-config="true" signature="beforeMethos()[pri:0, instance:mapSynqTest.mapSynqTestClass@41925502]" started-at="2018-05-08T21:02:09Z" name="beforeMethos" finished-at="2018-05-08T21:02:10Z" duration-ms="807" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethos -->
-        <test-method signature="ValidateDirectionDisplayedForAllCheckboxesChecked()[pri:0, instance:mapSynqTest.mapSynqTestClass@efde75f]" started-at="2018-05-08T20:10:57Z" name="ValidateDirectionDisplayedForAllCheckboxesChecked" description="Open a browser with http://www.mapsynq.com/ url" finished-at="2018-05-08T20:11:00Z" duration-ms="3164" status="PASS">
+        <test-method signature="ValidateDirectionDisplayedForAllCheckboxesChecked()[pri:0, instance:mapSynqTest.mapSynqTestClass@41925502]" started-at="2018-05-08T21:02:10Z" name="ValidateDirectionDisplayedForAllCheckboxesChecked" description="Open a browser with http://www.mapsynq.com/ url" finished-at="2018-05-08T21:02:15Z" duration-ms="4486" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ValidateDirectionDisplayedForAllCheckboxesChecked -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:mapSynqTest.mapSynqTestClass@efde75f]" started-at="2018-05-08T20:11:01Z" name="afterMethod" finished-at="2018-05-08T20:11:01Z" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:mapSynqTest.mapSynqTestClass@41925502]" started-at="2018-05-08T21:02:15Z" name="afterMethod" finished-at="2018-05-08T21:02:15Z" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:mapSynqTest.mapSynqTestClass@efde75f]" started-at="2018-05-08T20:11:01Z" name="afterTest" finished-at="2018-05-08T20:11:01Z" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="beforeMethos()[pri:0, instance:mapSynqTest.mapSynqTestClass@41925502]" started-at="2018-05-08T21:02:15Z" name="beforeMethos" finished-at="2018-05-08T21:02:16Z" duration-ms="700" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethos -->
+        <test-method signature="ValidateDirectionDisplayedForSelectedCheckBox()[pri:0, instance:mapSynqTest.mapSynqTestClass@41925502]" started-at="2018-05-08T21:02:16Z" name="ValidateDirectionDisplayedForSelectedCheckBox" description="Open a browser with http://www.mapsynq.com/ url" finished-at="2018-05-08T21:02:21Z" duration-ms="5594" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidateDirectionDisplayedForSelectedCheckBox -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:mapSynqTest.mapSynqTestClass@41925502]" started-at="2018-05-08T21:02:22Z" name="afterMethod" finished-at="2018-05-08T21:02:22Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:mapSynqTest.mapSynqTestClass@41925502]" started-at="2018-05-08T21:02:22Z" name="afterTest" finished-at="2018-05-08T21:02:22Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:mapSynqTest.mapSynqTestClass@efde75f]" started-at="2018-05-08T20:11:01Z" name="afterSuite" finished-at="2018-05-08T20:11:01Z" duration-ms="487" status="PASS">
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:mapSynqTest.mapSynqTestClass@41925502]" started-at="2018-05-08T21:02:22Z" name="afterSuite" finished-at="2018-05-08T21:02:22Z" duration-ms="483" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->

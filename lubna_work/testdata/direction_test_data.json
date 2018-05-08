@@ -21,7 +21,7 @@
 	},
 	"testMapDirectionWithFastestOptionEnabledOnly":{
 		"Source": "SENGKANG",
-		"Destination": "PUNGGOL",
+		"Destination": "BUONA VISTA",
 		"TrafficAware": false,
 		"TollAware": false,
 		"Fastest": true,

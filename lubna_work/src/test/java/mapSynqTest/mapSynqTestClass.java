@@ -38,13 +38,13 @@ public class mapSynqTestClass extends businessClass{
 		String url = "http://www.mapsynq.com/";
 		dr.get(url);
 	}
-	
+
 	@BeforeMethod
 	public void beforeMethos() 
 	{
 		dr.navigate().refresh();
 	}
-	
+
 	@Test(priority = 0, enabled=true, description = "Open a browser with http://www.mapsynq.com/ url, clear route, fill source and destination,click on getdirection button")
 	public void ValidateDirectionDisplayedForFilledSourceAndDestination()
 	{   
@@ -147,18 +147,52 @@ public class mapSynqTestClass extends businessClass{
 			e.printStackTrace();
 		}
 	}
-	
+
+	@Test(priority = 4, enabled=true, description = "Open a browser with http://www.mapsynq.com/ url")
+	public void  ValidateDirectionDisplayedForSelectedCheckBox()
+	{
+		try
+		{
+			String SourceLoc=pjc.parseJsonTestData(jsonObj, "testMapDirectionWithFastestOptionEnabledOnly", "Source");
+			String DestLoc= pjc.parseJsonTestData(jsonObj, "testMapDirectionWithFastestOptionEnabledOnly", "Destination");
+			dc.setLocation(SourceLoc, DestLoc);
+			dc.uncheckAllCheckBoxes();
+			if(dc.selectCheckBox("Fastest") == true && dc.selectCheckBox("Shortest") == true)
+			{
+				dc.getGetDirectionsBtn().click();
+				if(dc.ValidateTravelTimeDistanceDisplayedAsPerCheckBoxChecked("Fastest") == true && dc.ValidateTravelTimeDistanceDisplayedAsPerCheckBoxChecked("Shortest") == true)
+				{
+					System.out.println("The Travel Time Distance is displayed as per the checkboxes checked");
+				}
+				else
+				{
+					System.out.println("The Travel Time Distance is not displayed as per the checkboxes checked");
+					System.exit(1);
+				}
+			}
+			else
+			{
+				System.out.println("Unable to check the CheckBox");
+				System.exit(1);
+			}
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+
 	@AfterMethod
 	public void afterMethod()
 	{
 		System.out.println("Aftet method");
 	}
-	
+
 	@AfterTest
 	public void afterTest()
 	{
 		System.out.println("Aftet test");
-		
+
 	}
 
 	@AfterSuite

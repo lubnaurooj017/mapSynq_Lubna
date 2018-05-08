@@ -160,9 +160,11 @@ public class directionClass extends businessClass{
 		selectValuesFromBootstrapDropdowns(strDestinationLoc);
 	}
 
-	public boolean ValidateTravelTimeDistanceDisplayedAsPerCheckBoxChecked(String checkBoxName)
+	public boolean ValidateTravelTimeDistanceDisplayedAsPerCheckBoxChecked(String checkBoxName) 
 	{	
 		checkBoxName = checkBoxName.toUpperCase();
+		WebDriverWait wait = new WebDriverWait(dr,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(getSelectTimeDropDown())));	
 		boolean trafficAwareisDiaplayed = dr.findElement(By.id("divTrafficRouteTravelTimeDistance")).isDisplayed();
 		boolean fastestisDisplayed = dr.findElement(By.id("divFastestRouteTravelTimeDistance")).isDisplayed();
 		boolean tollAwareisDisplayed = dr.findElement(By.id("divErpRouteTravelTimeDistance")).isDisplayed();
@@ -200,11 +202,11 @@ public class directionClass extends businessClass{
 			break;
 		case "ALL" :
 			if(trafficAwareisDiaplayed && fastestisDisplayed && tollAwareisDisplayed && shortestisDisplayed)
-			{
+			{	
 				System.out.println("All the Routes Travel Time Distance is displayed");
 				return true;
 			}
-		
+			break;		
 		}
 		return false;
 	}
