@@ -14,9 +14,9 @@ public class businessClass {
 	public static WebDriver dr = null;
 	public WebDriver getDriver()
 	{
-		//String browserName = System.getProperty("browser");	
+		String browserName = System.getProperty("browser");	
 		//browserName = browserName.toUpperCase();
-		String browserName = "FIREFOX";
+		//String browserName = "FIREFOX";
 		browserName = browserName.toUpperCase();
 		switch(browserName) 
 		{

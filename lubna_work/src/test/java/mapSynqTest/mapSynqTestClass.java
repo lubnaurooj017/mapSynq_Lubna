@@ -26,7 +26,7 @@ public class mapSynqTestClass extends businessClass{
 	public void beforeSuite()
 	{	
 		dr.manage().window().maximize();
-		//browserUrl = System.getProperty("url");
+		browserUrl = System.getProperty("url");
 		jsonObj= pjc.getJsonTestDataObject();
 		// browserUrl = "http://www.mapsynq.com/";
 	}
@@ -250,7 +250,7 @@ public class mapSynqTestClass extends businessClass{
 		}
 	}
 	
-	@Test(priority = 5, enabled=true, description = "Open a browser with http://www.mapsynq.com/ url")
+	@Test(priority = 7, enabled=true, description = "Open a browser with http://www.mapsynq.com/ url")
 	public void  ValidateDirectionDisplayedForFastestCheckBox()
 	{
 		try
@@ -284,7 +284,7 @@ public class mapSynqTestClass extends businessClass{
 		}
 	}
 	
-	@Test(priority = 5, enabled=true, description = "Open a browser with http://www.mapsynq.com/ url")
+	@Test(priority = 8, enabled=true, description = "Open a browser with http://www.mapsynq.com/ url")
 	public void  ValidateDirectionDisplayedForShortestCheckBox()
 	{
 		try
