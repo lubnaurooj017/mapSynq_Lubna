@@ -14,7 +14,7 @@ This git repo is to automate the http://www.mapsynq.com/ website for testing pur
 - POM
 - DOM
 
-## Things which are implemented/configured in this automations:
+## Things which are implemented/configured in this automation
 - [x] Tests are runnable from the command line
 - [x] Tests are run against a configurable host, we have used http://www.mapsynq.com as the default
 - [x] Tests are configured to run on a various browser eg Chrome, FireFox, Safari 
@@ -40,7 +40,8 @@ This git repo is to automate the http://www.mapsynq.com/ website for testing pur
 > Safari
 `mvn clean test -Durl="http://www.mapsynq.com/" -Dbrowser="safari" -DxmlFileName=testng.xml`
 
-> *Some of important maven commands*:
+
+> *Some of important maven commands for reference*:
 ```
 mvn clean
 mvn clean install
@@ -48,6 +49,7 @@ mvn pre-clean
 mvn compile   
 mvn package
 ```
+
 ## Test Cases reports captured ?
 - [x] YES
 ## Location of test report captured:
