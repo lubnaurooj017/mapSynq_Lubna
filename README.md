@@ -14,7 +14,7 @@ This git repo is to automate the http://www.mapsynq.com/ website for testing pur
 - POM
 - DOM
 
-## Things which are implemented/configured in this automations:
+## Things which are implemented/configured in this automation
 - [x] Tests are runnable from the command line
 - [x] Tests are run against a configurable host, we have used http://www.mapsynq.com as the default
 - [x] Tests are configured to run on a various browser eg Chrome, FireFox, Safari 
@@ -31,9 +31,17 @@ This git repo is to automate the http://www.mapsynq.com/ website for testing pur
 3. Follow the maven commands below to run (test) this project:
 
 ## maven command to run the project through command line by passing arguments
+> chrome
+`mvn clean test -Durl="http://www.mapsynq.com/" -Dbrowser="chrome" -DxmlFileName=testng.xml`
+
+> Firefox
 `mvn clean test -Durl="http://www.mapsynq.com/" -Dbrowser="firefox" -DxmlFileName=testng.xml`
 
-> *Some of important maven commands*:
+> Safari
+`mvn clean test -Durl="http://www.mapsynq.com/" -Dbrowser="safari" -DxmlFileName=testng.xml`
+
+
+> *Some of important maven commands for reference*:
 ```
 mvn clean
 mvn clean install
@@ -41,21 +49,20 @@ mvn pre-clean
 mvn compile   
 mvn package
 ```
+
 ## Test Cases reports captured ?
 - [x] YES
 ## Location of test report captured:
 - Go to <LOCAL_WORKING_DIRECTORY>/lubna_work/target/surefire-reports/
 - Then click index.html present inside
 - Things you should be able to see:
-      ```
-      testng.xml
-      1 test
-      0 groups
-      Times
-      Reporter output
-      Ignored methods
-      Chronological view
-      ```
+  - testng.xml
+  - test
+  - groups
+  - Times
+  - Reporter output
+  - Ignored methods
+  - Chronological view
 
 ## Test Cases **SCREENSHOTS** captured ?
 - [x] YES
@@ -92,6 +99,18 @@ mvn package
 - pom.xml
 - testng.xml
 
-## Test Cases:
+## Test Cases Methods used:
+- ValidateErrorMessageDisplayedForInvalidLogin
+- ValidateValidLogin
+- ValidateDirectionDisplayedForFilledSourceAndDestination
+- ValidateAndClickAlertForUnfilledSourceAndDestination
+- ValidateAndClickOnAlertForAllCheckboxesUnchecked
+- ValidateDirectionDisplayedForAllCheckboxesChecked
+- ValidateDirectionDisplayedForSelectedCheckBox
+- ValidateDirectionDisplayedForTollAwareCheckBox
+- ValidateDirectionDisplayedForTrafficAwareCheckBox
+- ValidateDirectionDisplayedForFastestCheckBox
+- ValidateDirectionDisplayedForShortestCheckBox
+
 
 
