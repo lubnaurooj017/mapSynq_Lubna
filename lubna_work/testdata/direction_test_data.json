@@ -51,5 +51,13 @@
 		"TollAware": true,
 		"Fastest": true,
 		"Shortest": true
+	},
+	"testErrorMessageDisplayedForInvalidLogin":{
+		"username": "urooj01234",
+		"password": "1234rgthf"
+	},
+	"testValidLogin":{
+		"username": "lubnaurooj.017@gmail.com",
+		"password": "mapsynq123"
 	}
 }

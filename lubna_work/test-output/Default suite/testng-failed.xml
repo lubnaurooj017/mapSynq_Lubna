@@ -3,15 +3,14 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="mapSynqTest.mapSynqTestClass">
+      <class name="mapSynqTest.mapSynqLiveTestCaseClass">
         <methods>
-          <include name="beforeTest"/>
-          <include name="afterSuite"/>
           <include name="beforeSuite"/>
-          <include name="afterTest"/>
-          <include name="ValidateAndClickOnAlertForAllCheckboxesUnchecked"/>
+          <include name="beforeMethos"/>
+          <include name="beforeTest"/>
+          <include name="ValidateValidLogin"/>
         </methods>
-      </class> <!-- mapSynqTest.mapSynqTestClass -->
+      </class> <!-- mapSynqTest.mapSynqLiveTestCaseClass -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
