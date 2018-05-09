@@ -19,7 +19,7 @@ public class mapSynqTestClass extends businessClass{
 	parseJsonClass pjc= new parseJsonClass();
 	String browserUrl="";
 	directionClass dc = new directionClass();
-	WebDriver dr = getDriver();
+	//WebDriver dr = getDriver();
 	JSONObject jsonObj= null;
 
 	@BeforeSuite
