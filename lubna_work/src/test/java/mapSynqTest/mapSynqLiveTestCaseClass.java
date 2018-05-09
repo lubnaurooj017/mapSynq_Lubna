@@ -2,6 +2,7 @@ package mapSynqTest;
 
 import org.json.JSONObject;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
@@ -93,5 +94,11 @@ public class mapSynqLiveTestCaseClass extends businessClass {
 			e.printStackTrace();
 		}
 
+	}
+	
+	@AfterSuite
+	public void afterSuite()
+	{
+		dr.close();
 	}
 }

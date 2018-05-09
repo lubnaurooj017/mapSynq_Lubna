@@ -6,8 +6,8 @@
 	</listeners>
   <test name="mapSynqTestClass" >
     <classes>
+      <class name="mapSynqTest.mapSynqLiveTestCaseClass"/>
       <class name="mapSynqTest.mapSynqTestClass"/>
-      <!-- <class name="mapSynqTest.mapSynqLiveTestCaseClass"/> -->
     </classes>
   </test> <!-- TestNG -->
 </suite> <!-- Suite -->
