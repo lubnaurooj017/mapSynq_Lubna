@@ -23,7 +23,7 @@ public class mapSynqLiveTestCaseClass extends businessClass {
 	public void beforeSuite()
 	{	
 		dr.manage().window().maximize();
-		//browserUrl = System.getProperty("url");
+		browserUrl = System.getProperty("url");
 		jsonObj= pjc.getJsonTestDataObject();
 		// browserUrl = "http://www.mapsynq.com/";
 	}
